@@ -1,1 +1,846 @@
-<h1>Hi, My self Sudhanshu Sharma</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudhanshu Sharma | Backend Engineer (PHP, Laravel, MySQL)</title>
+  <meta name="description" content="Sudhanshu Sharma, Backend Engineer with 3+ years of experience building RESTful APIs, backend modules and database-driven web applications using PHP, Laravel, CodeIgniter and MySQL.">
+  <meta name="author" content="Sudhanshu Sharma">
+  <meta name="theme-color" content="#1C2733">
+  <link rel="canonical" href="https://sudhanshu441.github.io/my-portfolio/">
+
+  <!-- Open Graph / social sharing (crawlers require absolute URLs here) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sudhanshu Sharma">
+  <meta property="og:title" content="Sudhanshu Sharma | Backend Engineer (PHP, Laravel, MySQL)">
+  <meta property="og:description" content="Backend Engineer building RESTful APIs, backend modules and database-driven web applications using PHP, Laravel, CodeIgniter and MySQL.">
+  <meta property="og:url" content="https://sudhanshu441.github.io/my-portfolio/">
+  <meta property="og:image" content="https://sudhanshu441.github.io/my-portfolio/assets/profile.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Portrait of Sudhanshu Sharma">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sudhanshu Sharma | Backend Engineer (PHP, Laravel, MySQL)">
+  <meta name="twitter:description" content="Backend Engineer building RESTful APIs, backend modules and database-driven web applications using PHP, Laravel, CodeIgniter and MySQL.">
+  <meta name="twitter:image" content="https://sudhanshu441.github.io/my-portfolio/assets/profile.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C2733'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='%234FC3B1'%3ESS%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+
+  <style>
+    :root {
+      --navy: #1C2733;
+      --navy-deep: #141D27;
+      --navy-soft: #24313F;
+      --teal: #1F8A7A;          /* brand accent: lines, dots, borders, icons */
+      --teal-strong: #176F63;   /* accessible teal for text/buttons on white (6:1) */
+      --teal-light: #4FC3B1;    /* accessible teal for text on navy (7:1) */
+      --teal-tint: #E8F4F2;
+      --ink: #1C2733;
+      --muted: #55616E;
+      --line: #E3E8ED;
+      --surface: #F5F7F9;
+      --nav-h: 68px;
+      --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --bs-body-color: var(--ink);
+      --bs-link-color-rgb: 23, 111, 99;
+      --bs-link-hover-color-rgb: 20, 29, 39;
+    }
+
+    html { scroll-padding-top: var(--nav-h); }
+    body {
+      font-size: 1.0625rem; /* 17px */
+      line-height: 1.7;
+      color: var(--ink);
+      background: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+    .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    /* Focus states */
+    a:focus-visible, button:focus-visible, .btn:focus-visible, .navbar-toggler:focus-visible {
+      outline: 3px solid var(--teal-light);
+      outline-offset: 3px;
+      box-shadow: none;
+      border-radius: 6px;
+    }
+    .bg-light-section a:focus-visible, .section a:focus-visible { outline-color: var(--teal-strong); }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 2000;
+      background: var(--teal-strong); color: #fff; padding: .6rem 1rem; border-radius: 8px;
+      text-decoration: none; font-weight: 600;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ---------- Navbar ---------- */
+    .site-nav {
+      background: rgba(28, 39, 51, .97);
+      min-height: var(--nav-h);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: box-shadow .25s ease;
+    }
+    @supports (backdrop-filter: blur(8px)) {
+      .site-nav { background: rgba(28, 39, 51, .9); backdrop-filter: blur(10px); }
+    }
+    .site-nav.scrolled { box-shadow: 0 6px 24px rgba(10, 16, 22, .25); }
+    .brand { display: flex; align-items: center; gap: .65rem; color: #fff; font-weight: 700; text-decoration: none; }
+    .brand:hover { color: #fff; }
+    .brand-mark {
+      width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center;
+      background: var(--teal); color: #fff; font-size: .9rem; font-weight: 800; letter-spacing: .02em;
+    }
+    .site-nav .nav-link {
+      color: rgba(255,255,255,.8);
+      font-weight: 500; font-size: .98rem;
+      padding: .5rem .85rem !important;
+      position: relative;
+    }
+    .site-nav .nav-link:hover { color: #fff; }
+    .site-nav .nav-link.active { color: var(--teal-light); }
+    .site-nav .nav-link::after {
+      content: ""; position: absolute; left: .85rem; right: .85rem; bottom: .2rem;
+      height: 2px; background: var(--teal-light); border-radius: 2px;
+      transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+    }
+    .site-nav .nav-link.active::after { transform: scaleX(1); }
+    .navbar-toggler { border-color: rgba(255,255,255,.25); padding: .4rem .6rem; }
+    .navbar-toggler-icon { filter: invert(1); }
+    @media (max-width: 991.98px) {
+      .site-nav { background: var(--navy); }
+      .site-nav .navbar-collapse { padding: .5rem 0 1rem; }
+      .site-nav .nav-link::after { display: none; }
+      .site-nav .nav-link.active { background: rgba(79,195,177,.1); border-radius: 8px; }
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn { font-weight: 600; border-radius: 10px; padding: .75rem 1.35rem; font-size: 1rem; }
+    .btn-teal { background: var(--teal-strong); border: 2px solid var(--teal-strong); color: #fff; }
+    .btn-teal:hover, .btn-teal:focus-visible { background: #125A50; border-color: #125A50; color: #fff; }
+    .btn-outline-light-teal { border: 2px solid rgba(255,255,255,.55); color: #fff; background: transparent; }
+    .btn-outline-light-teal:hover, .btn-outline-light-teal:focus-visible { background: #fff; color: var(--navy); border-color: #fff; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background:
+        radial-gradient(900px 500px at 85% 20%, rgba(31,138,122,.22), transparent 60%),
+        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: #fff;
+      padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(4rem, 9vw, 7rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before { /* faint grid texture */
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
+      -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
+    }
+    .hero .container { position: relative; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      color: var(--teal-light); font-size: .9rem; letter-spacing: .02em;
+      background: rgba(79,195,177,.08); border: 1px solid rgba(79,195,177,.25);
+      padding: .35rem .8rem; border-radius: 999px; margin-bottom: 1.25rem;
+    }
+    .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-light); }
+    .hero h1 {
+      color: #fff; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; line-height: 1.08;
+      letter-spacing: -0.035em; margin-bottom: .75rem;
+    }
+    .hero-title { font-size: clamp(1.1rem, 2.4vw, 1.4rem); font-weight: 600; color: #E6ECF1; margin-bottom: 1.1rem; }
+    .hero-title .sep { color: var(--teal-light); margin: 0 .35rem; }
+    .hero-title .nw { white-space: nowrap; }
+    @media (max-width: 420px) {
+      .hero-title .sep { display: none; }
+      .hero-title .nw { display: block; }
+    }
+    .hero-lead { color: #C3CDD6; font-size: 1.1rem; max-width: 36rem; margin-bottom: 1.25rem; }
+    .hero-meta { color: #AEB9C4; font-size: .98rem; display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; margin-bottom: 2rem; }
+    .hero-meta i { color: var(--teal-light); margin-right: .35rem; }
+    .hero-meta a { color: #AEB9C4; text-decoration: none; }
+    .hero-meta a:hover { color: #fff; }
+
+    .portrait-wrap {
+      position: relative; width: clamp(220px, 32vw, 340px); aspect-ratio: 1; margin: 0 auto;
+    }
+    .portrait-wrap::before { /* teal ring */
+      content: ""; position: absolute; inset: -12px; border-radius: 50%;
+      border: 2px solid rgba(79,195,177,.55);
+    }
+    .portrait-wrap::after { /* offset accent ring */
+      content: ""; position: absolute; inset: -28px; border-radius: 50%;
+      border: 1px dashed rgba(79,195,177,.25);
+    }
+    .portrait {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+      border-radius: 50%; display: block; position: relative; z-index: 1;
+      border: 6px solid var(--navy-soft);
+      box-shadow: 0 30px 60px rgba(0,0,0,.35);
+      background: var(--navy-soft);
+    }
+    .portrait-badge {
+      position: absolute; z-index: 2; bottom: 6%; right: -4%;
+      background: #fff; color: var(--ink); border-radius: 999px;
+      padding: .45rem .9rem; font-size: .85rem; font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25); white-space: nowrap;
+    }
+    .portrait-badge i { color: var(--teal-strong); }
+    @media (max-width: 991.98px) {
+      .hero { text-align: center; }
+      .hero-lead { margin-left: auto; margin-right: auto; }
+      .hero-meta, .hero-actions { justify-content: center; }
+      .portrait-wrap { margin-bottom: 2.75rem; }
+    }
+    @media (max-width: 575.98px) {
+      .portrait-badge { right: 50%; transform: translateX(50%); bottom: -14px; }
+      .hero-actions .btn { width: 100%; }
+    }
+
+    /* ---------- Sections ---------- */
+    .section { padding: clamp(4rem, 8vw, 6rem) 0; }
+    .bg-light-section { background: var(--surface); }
+    .section-label { color: var(--teal-strong); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .5rem; }
+    .section-title { font-size: clamp(1.75rem, 3.5vw, 2.3rem); margin-bottom: .75rem; }
+    .section-intro { color: var(--muted); max-width: 42rem; }
+    .section-head { margin-bottom: 2.75rem; }
+    .section-head .rule { width: 48px; height: 3px; background: var(--teal); border-radius: 3px; margin-top: 1rem; }
+
+    /* About */
+    .about-text { font-size: 1.125rem; color: #33404D; }
+    .facts { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; }
+    .facts dt { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+    .facts dd { margin-bottom: 1rem; font-weight: 500; word-break: break-word; }
+    .facts dd:last-child { margin-bottom: 0; }
+    .facts a { text-decoration: none; }
+    .facts a:hover { text-decoration: underline; }
+
+    /* Skills */
+    .skill-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; height: 100%;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .skill-card:hover { border-color: rgba(31,138,122,.45); box-shadow: 0 12px 30px rgba(28,39,51,.07); }
+    .skill-card h3 { font-size: 1.05rem; display: flex; align-items: center; gap: .6rem; margin-bottom: 1rem; }
+    .icon-chip {
+      width: 38px; height: 38px; flex: 0 0 38px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--teal-tint); color: var(--teal-strong); font-size: 1.1rem;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 0; }
+    .pill {
+      font-size: .92rem; font-weight: 500; color: var(--ink);
+      background: var(--surface); border: 1px solid var(--line);
+      padding: .3rem .8rem; border-radius: 999px; line-height: 1.5;
+    }
+
+    /* Experience timeline */
+    .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; top: 6px; bottom: 6px; left: 11px; width: 2px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--line) 100%);
+    }
+    .tl-item { position: relative; padding-left: 3rem; padding-bottom: 2.25rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: 0; top: 4px; width: 24px; height: 24px; border-radius: 50%;
+      background: #fff; border: 3px solid var(--teal); display: grid; place-items: center;
+    }
+    .tl-item.current .tl-dot { background: var(--teal); box-shadow: 0 0 0 6px rgba(31,138,122,.15); }
+    .tl-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem 1.6rem; }
+    .tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; margin-bottom: .35rem; }
+    .tl-role { font-size: 1.2rem; margin: 0; }
+    .tl-date {
+      font-size: .88rem; font-weight: 600; color: var(--teal-strong); background: var(--teal-tint);
+      padding: .2rem .7rem; border-radius: 999px; white-space: nowrap; align-self: flex-start;
+    }
+    .tl-org { color: var(--muted); font-weight: 500; margin-bottom: .85rem; }
+    .tl-org i { color: var(--teal-strong); }
+    .tl-points { margin: 0; padding-left: 1.1rem; color: #33404D; }
+    .tl-points li { margin-bottom: .4rem; }
+    .tl-points li::marker { color: var(--teal); }
+    @media (min-width: 768px) {
+      .tl-item { padding-left: 3.5rem; }
+    }
+
+    /* Projects */
+    .project-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.6rem; height: 100%;
+      display: flex; flex-direction: column; position: relative; overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .project-card::before {
+      content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: var(--teal);
+      transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(28,39,51,.1); border-color: rgba(31,138,122,.35); }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-card .icon-chip { width: 46px; height: 46px; flex-basis: 46px; font-size: 1.3rem; margin-bottom: 1.1rem; }
+    .project-card h3 { font-size: 1.15rem; line-height: 1.4; margin-bottom: .6rem; }
+    .project-card p { color: #45515D; margin: 0; font-size: 1rem; }
+    .note { font-size: .95rem; color: var(--muted); display: inline-flex; gap: .5rem; align-items: center; }
+    .note i { color: var(--teal-strong); }
+
+    /* Awards */
+    .award {
+      display: flex; gap: 1.1rem; align-items: flex-start; height: 100%;
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem;
+    }
+    .award .icon-chip { width: 52px; height: 52px; flex-basis: 52px; font-size: 1.45rem; border-radius: 14px; }
+    .award h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+    .award .year { font-size: .85rem; font-weight: 600; color: var(--teal-strong); background: var(--teal-tint); padding: .1rem .55rem; border-radius: 999px; margin-left: .35rem; vertical-align: middle; }
+    .award p { margin: 0; color: #45515D; font-size: 1rem; }
+
+    /* Education */
+    .edu {
+      background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--teal);
+      border-radius: 14px; padding: 1.35rem 1.5rem; height: 100%;
+    }
+    .edu h3 { font-size: 1.08rem; margin-bottom: .3rem; }
+    .edu .inst { color: #45515D; margin-bottom: .75rem; font-size: 1rem; }
+    .edu .meta { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .edu .meta span { font-size: .88rem; font-weight: 600; padding: .2rem .7rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+    .edu .meta span.score { background: var(--teal-tint); border-color: transparent; color: var(--teal-strong); }
+
+    /* Contact */
+    .contact { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; }
+    .contact .section-label { color: var(--teal-light); }
+    .contact .section-title { color: #fff; }
+    .contact .section-intro { color: #C3CDD6; }
+    .contact .section-head .rule { background: var(--teal-light); }
+    .contact-card {
+      display: flex; align-items: center; gap: 1rem; height: 100%;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px; padding: 1.25rem 1.35rem; color: #fff; text-decoration: none;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    a.contact-card:hover { background: rgba(79,195,177,.1); border-color: rgba(79,195,177,.5); color: #fff; transform: translateY(-2px); }
+    .contact-card .ci {
+      width: 48px; height: 48px; flex: 0 0 48px; border-radius: 12px; display: grid; place-items: center;
+      background: rgba(79,195,177,.14); color: var(--teal-light); font-size: 1.3rem;
+    }
+    .contact-card small { display: block; color: #AEB9C4; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+    .contact-card span.val { font-weight: 600; overflow-wrap: break-word; }
+    .contact a:focus-visible { outline-color: var(--teal-light); }
+
+    .site-footer { background: var(--navy-deep); color: #AEB9C4; border-top: 1px solid rgba(255,255,255,.06); padding: 1.75rem 0; font-size: .95rem; }
+    .site-footer a { color: #AEB9C4; text-decoration: none; font-size: 1.25rem; }
+    .site-footer a:hover { color: var(--teal-light); }
+
+    /* ---------- Reveal on scroll (only when JS is active) ---------- */
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .js .reveal { opacity: 1; transform: none; }
+      .project-card:hover, a.contact-card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg site-nav sticky-top" id="siteNav" aria-label="Primary">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="Sudhanshu Sharma, back to top">
+        <span class="brand-mark" aria-hidden="true">SS</span>
+        <span>Sudhanshu Sharma</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero -->
+    <header class="hero" id="home">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-5 order-lg-2">
+            <div class="portrait-wrap">
+              <img class="portrait" src="assets/profile.jpg" width="600" height="600" alt="Portrait of Sudhanshu Sharma, smiling, wearing a dark suit and white shirt">
+              <span class="portrait-badge"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Ujjain, India</span>
+            </div>
+          </div>
+          <div class="col-lg-7 order-lg-1">
+            <span class="eyebrow mono"><span class="dot" aria-hidden="true"></span>Backend Engineer</span>
+            <h1>Sudhanshu Sharma</h1>
+            <p class="hero-title"><span class="nw">Backend Engineer</span> <span class="sep" aria-hidden="true">|</span> <span class="nw">PHP, Laravel, MySQL</span></p>
+            <p class="hero-lead">Building RESTful APIs, backend modules and database-driven web applications using PHP, Laravel, CodeIgniter and MySQL.</p>
+            <div class="hero-meta">
+              <span><i class="bi bi-geo-alt" aria-hidden="true"></i>Ujjain, Madhya Pradesh, India</span>
+              <a href="mailto:sharmasudhanshu441@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i>sharmasudhanshu441@gmail.com</a>
+            </div>
+            <div class="hero-actions d-flex flex-wrap gap-3">
+              <a class="btn btn-teal" href="assets/Sudhanshu_Sharma_Resume.pdf" target="_blank" rel="noopener">
+                <i class="bi bi-file-earmark-arrow-down me-2" aria-hidden="true"></i>Download Resume
+              </a>
+              <a class="btn btn-outline-light-teal" href="#contact">
+                <i class="bi bi-chat-dots me-2" aria-hidden="true"></i>Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">01 / About</p>
+          <h2 class="section-title" id="about-title">About me</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-7 reveal">
+            <p class="about-text">Backend Engineer with 3+ years of experience building RESTful APIs, backend modules and database-driven web applications using PHP, Laravel, CodeIgniter and MySQL.</p>
+            <p class="about-text">Experienced in SQL query optimization, server-side validation, API authentication, and third-party and AI/LLM (OpenAI, Gemini) API integrations.</p>
+            <p class="about-text mb-0">Has delivered ERP/CRM modules, GST and income-tax workflows, government-contract projects and AI-powered products while working in both remote and on-site teams.</p>
+          </div>
+          <div class="col-lg-5 reveal">
+            <dl class="facts mb-0">
+              <dt>Location</dt>
+              <dd>Ujjain, Madhya Pradesh, India</dd>
+              <dt>Email</dt>
+              <dd><a href="mailto:sharmasudhanshu441@gmail.com">sharmasudhanshu441<wbr>@gmail.com</a></dd>
+              <dt>Phone</dt>
+              <dd><a href="tel:+918602186117">+91 8602186117</a></dd>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/sudhanshu-tech" target="_blank" rel="noopener">linkedin.com/in/sudhanshu-tech</a></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section bg-light-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">02 / Skills</p>
+          <h2 class="section-title" id="skills-title">Technical skills</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-code-slash"></i></span>Languages</h3>
+              <ul class="pills"><li class="pill">PHP</li><li class="pill">SQL</li><li class="pill">JavaScript</li><li class="pill">Bash</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-hdd-stack"></i></span>Backend</h3>
+              <ul class="pills"><li class="pill">Laravel</li><li class="pill">CodeIgniter</li><li class="pill">RESTful API Design</li><li class="pill">MVC</li><li class="pill">OOP</li><li class="pill">Design Patterns</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-database"></i></span>Databases</h3>
+              <ul class="pills"><li class="pill">MySQL</li><li class="pill">Database Design</li><li class="pill">Query Optimization</li><li class="pill">Indexing</li><li class="pill">Transactions</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-shield-lock"></i></span>Authentication &amp; Security</h3>
+              <ul class="pills"><li class="pill">Laravel Sanctum</li><li class="pill">JWT</li><li class="pill">OAuth 2.0</li><li class="pill">RBAC</li><li class="pill">Server-side Validation</li><li class="pill">API Security</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-list-task"></i></span>Queues &amp; Background Jobs</h3>
+              <ul class="pills"><li class="pill">Laravel Queues</li><li class="pill">Laravel Horizon</li><li class="pill">Scheduled Jobs</li><li class="pill">Webhooks</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-plug"></i></span>Integrations</h3>
+              <ul class="pills"><li class="pill">AI APIs</li><li class="pill">Prompt Engineering</li><li class="pill">Payment Gateways</li><li class="pill">Email/SMS APIs</li><li class="pill">Third-party REST APIs</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-cloud"></i></span>Cloud &amp; Servers</h3>
+              <ul class="pills"><li class="pill">AWS (EC2, S3, RDS, CloudFront, IAM)</li><li class="pill">Linux</li><li class="pill">Nginx</li><li class="pill">CI/CD with GitHub Actions</li></ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 reveal">
+            <div class="skill-card">
+              <h3><span class="icon-chip" aria-hidden="true"><i class="bi bi-tools"></i></span>Tools &amp; Practices</h3>
+              <ul class="pills"><li class="pill">Git</li><li class="pill">GitHub</li><li class="pill">Claude Code</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">03 / Experience</p>
+          <h2 class="section-title" id="experience-title">Professional experience</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9">
+            <ol class="timeline">
+              <li class="tl-item current reveal">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <article class="tl-card">
+                  <div class="tl-head">
+                    <h3 class="tl-role">Freelance Backend Developer</h3>
+                    <span class="tl-date">Jun 2026 – Present</span>
+                  </div>
+                  <p class="tl-org"><i class="bi bi-briefcase me-1" aria-hidden="true"></i> Self-employed, Remote</p>
+                  <ul class="tl-points">
+                    <li>Build ERP systems and dynamic business websites for clients using PHP and MySQL.</li>
+                    <li>Handle hosting setup, domain configuration and production deployment for client applications.</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="tl-item reveal">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <article class="tl-card">
+                  <div class="tl-head">
+                    <h3 class="tl-role">Full Stack Engineer</h3>
+                    <span class="tl-date">Dec 2025 – Jun 2026</span>
+                  </div>
+                  <p class="tl-org"><i class="bi bi-building me-1" aria-hidden="true"></i> GrayCyan AI, Canada (Remote)</p>
+                  <ul class="tl-points">
+                    <li>Built RESTful APIs and backend features in Laravel and MySQL for the company's web applications.</li>
+                    <li>Implemented business logic, database operations and third-party API integrations that power application workflows.</li>
+                    <li>Debugged and resolved application issues and maintained code quality through Git-based workflows and Jira-tracked tasks with cross-functional teams.</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="tl-item reveal">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <article class="tl-card">
+                  <div class="tl-head">
+                    <h3 class="tl-role">Senior Developer</h3>
+                    <span class="tl-date">Apr 2025 – Nov 2025</span>
+                  </div>
+                  <p class="tl-org"><i class="bi bi-building me-1" aria-hidden="true"></i> e-Suvidha Technologies, Bhopal (On-site)</p>
+                  <ul class="tl-points">
+                    <li>Designed and built backend modules and RESTful APIs in Laravel and MySQL for ERP, GST/income-tax and government-contract projects.</li>
+                    <li>Optimized SQL queries and added server-side validation, improving application performance and data reliability.</li>
+                    <li>Diagnosed and fixed bugs in existing modules and shipped feature enhancements following development best practices.</li>
+                  </ul>
+                </article>
+              </li>
+              <li class="tl-item reveal">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <article class="tl-card">
+                  <div class="tl-head">
+                    <h3 class="tl-role">Software Developer</h3>
+                    <span class="tl-date">Apr 2023 – Mar 2025</span>
+                  </div>
+                  <p class="tl-org"><i class="bi bi-building me-1" aria-hidden="true"></i> Onlighten Media, Mumbai (Remote)</p>
+                  <ul class="tl-points">
+                    <li>Built and maintained web applications using PHP (Laravel, CodeIgniter), MySQL and JavaScript.</li>
+                    <li>Developed RESTful APIs and backend business logic, and integrated third-party services to meet business requirements.</li>
+                    <li>Improved application stability by resolving bugs, optimizing SQL queries and maintaining existing modules.</li>
+                  </ul>
+                </article>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section bg-light-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">04 / Projects</p>
+          <h2 class="section-title" id="projects-title">Selected projects</h2>
+          <p class="note mb-0"><i class="bi bi-lock" aria-hidden="true"></i>Company projects, so no public links or source code.</p>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-heart-pulse"></i></span>
+              <h3>Shakuntala Healthcare &amp; ITgst</h3>
+              <p>Developed REST APIs consumed by mobile applications and built ITR and GST workflows.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-diagram-3"></i></span>
+              <h3>ERP / CRM Management System</h3>
+              <p>Built business modules for customer information management, operational workflows and centralized data handling, giving teams one system for day-to-day operations.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-gear-wide-connected"></i></span>
+              <h3>Kaizenify – AI-Powered Manufacturing Platform</h3>
+              <p>Contributed to an internal manufacturing platform that uses AI-assisted workflows to organize operational processes, manage process documentation and make business information easier to access.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-person-video3"></i></span>
+              <h3>Cuevue – AI-Powered Website Engagement Platform</h3>
+              <p>Worked on website engagement features, including interactive virtual avatars, automated lead capture, appointment booking and multilingual visitor interactions, that help businesses turn website visitors into leads.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-lightning-charge"></i></span>
+              <h3>AI-Powered Lead Generation &amp; Landing Page Automation</h3>
+              <p>Built automated workflows for lead generation and landing page creation, integrating external AI services to reduce manual campaign setup.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="project-card">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-file-earmark-diff"></i></span>
+              <h3>Configuration Change Monitoring Tool</h3>
+              <p>Implemented monitoring of configuration files to detect changes and report them for troubleshooting and configuration management.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Awards -->
+    <section class="section" id="awards" aria-labelledby="awards-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">05 / Awards</p>
+          <h2 class="section-title" id="awards-title">Achievements &amp; awards</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <article class="award">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-trophy"></i></span>
+              <div>
+                <h3>Innovation Excellence Award <span class="year">2025</span></h3>
+                <p>Redesigned the core API architecture, improving system response time by 40% and reducing server infrastructure costs; also built automation scripts.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal">
+            <article class="award">
+              <span class="icon-chip" aria-hidden="true"><i class="bi bi-award"></i></span>
+              <div>
+                <h3>Punctuality &amp; Discipline Excellence Award</h3>
+                <p>Recognized for consistent conduct and time management throughout academic years.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section bg-light-section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">06 / Education</p>
+          <h2 class="section-title" id="education-title">Education</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <article class="edu">
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p class="inst">University Institute of Technology (UIT), RGPV, Bhopal</p>
+              <div class="meta"><span>2024 – 2026</span><span class="score">CGPA: 7.5</span></div>
+            </article>
+          </div>
+          <div class="col-md-6 reveal">
+            <article class="edu">
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <p class="inst">Institute of Computer Science, Vikram University, Ujjain</p>
+              <div class="meta"><span>2021 – 2024</span><span class="score">CGPA: 7.4</span></div>
+            </article>
+          </div>
+          <div class="col-md-6 reveal">
+            <article class="edu">
+              <h3>Class XII (PCM)</h3>
+              <p class="inst">Saraswati Shishu Vidya Mandir, Khachrod</p>
+              <div class="meta"><span>2021</span><span class="score">87.8%</span></div>
+            </article>
+          </div>
+          <div class="col-md-6 reveal">
+            <article class="edu">
+              <h3>Class X</h3>
+              <p class="inst">Shri Raj Rajendra School, Khachrod</p>
+              <div class="meta"><span>2019</span><span class="score">88.2%</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label mono">07 / Contact</p>
+          <h2 class="section-title" id="contact-title">Get in touch</h2>
+          <p class="section-intro mb-0">Reach me by email or phone, or connect on LinkedIn.</p>
+          <div class="rule"></div>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <a class="contact-card" href="mailto:sharmasudhanshu441@gmail.com">
+              <span class="ci" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+              <span><small>Email</small><span class="val">sharmasudhanshu441<wbr>@gmail.com</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <a class="contact-card" href="tel:+918602186117">
+              <span class="ci" aria-hidden="true"><i class="bi bi-telephone"></i></span>
+              <span><small>Phone</small><span class="val">+91 8602186117</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <a class="contact-card" href="https://www.linkedin.com/in/sudhanshu-tech" target="_blank" rel="noopener">
+              <span class="ci" aria-hidden="true"><i class="bi bi-linkedin"></i></span>
+              <span><small>LinkedIn</small><span class="val">linkedin.com/in/<wbr>sudhanshu-tech</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <a class="contact-card" href="https://sudhanshu441.github.io/my-portfolio" target="_blank" rel="noopener">
+              <span class="ci" aria-hidden="true"><i class="bi bi-globe2"></i></span>
+              <span><small>Portfolio</small><span class="val">sudhanshu441.github.io/<wbr>my-portfolio</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="contact-card">
+              <span class="ci" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <span><small>Location</small><span class="val">Ujjain, Madhya Pradesh, India</span></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <a class="contact-card" href="assets/Sudhanshu_Sharma_Resume.pdf" target="_blank" rel="noopener">
+              <span class="ci" aria-hidden="true"><i class="bi bi-file-earmark-person"></i></span>
+              <span><small>Resume</small><span class="val">Download PDF</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+      <p class="mb-0">&copy; 2026 Sudhanshu Sharma</p>
+      <div class="d-flex gap-3">
+        <a href="mailto:sharmasudhanshu441@gmail.com" aria-label="Email Sudhanshu Sharma"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+        <a href="tel:+918602186117" aria-label="Call Sudhanshu Sharma"><i class="bi bi-telephone" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/sudhanshu-tech" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://sudhanshu441.github.io/my-portfolio" target="_blank" rel="noopener" aria-label="Portfolio website"><i class="bi bi-globe2" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      'use strict';
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var hasIO = 'IntersectionObserver' in window;
+      var nav = document.getElementById('siteNav');
+      var menu = document.getElementById('navMenu');
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('#navMenu .nav-link'));
+
+      // Navbar shadow once the page is scrolled
+      function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Close the mobile menu after choosing a section
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (menu.classList.contains('show') && window.bootstrap) {
+            bootstrap.Collapse.getOrCreateInstance(menu).hide();
+          }
+        });
+      });
+
+      // Active link highlight
+      function setActive(id) {
+        navLinks.forEach(function (link) {
+          var on = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', on);
+          if (on) { link.setAttribute('aria-current', 'location'); } else { link.removeAttribute('aria-current'); }
+        });
+      }
+      var sections = navLinks
+        .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+        .filter(Boolean);
+
+      function updateActive() {
+        var marker = window.innerHeight * 0.35;
+        var current = '';
+        sections.forEach(function (sec) {
+          if (sec.getBoundingClientRect().top <= marker) { current = sec.id; }
+        });
+        // At the very bottom, the last section is the active one
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+          current = sections[sections.length - 1].id;
+        }
+        setActive(current);
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(function () { updateActive(); ticking = false; });
+        }
+      }, { passive: true });
+      window.addEventListener('resize', updateActive);
+      updateActive();
+
+      // Fade-in on scroll
+      var items = document.querySelectorAll('.reveal');
+      if (reduceMotion || !hasIO) {
+        items.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        document.documentElement.classList.add('js');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        items.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</body>
+</html>
